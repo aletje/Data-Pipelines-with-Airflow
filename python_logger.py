@@ -1,4 +1,5 @@
 # Defining a function that uses the python logger to log a function
+# trigger this function using Airflow
 
 import datetime
 import logging
