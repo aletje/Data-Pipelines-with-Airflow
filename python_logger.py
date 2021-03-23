@@ -1,5 +1,6 @@
 # Defining a function that uses the python logger to log a function
-# trigger this function using Airflow
+# Trigger this function using an Airflow task. 
+# Airflow can be used to trigger heavy processing steps for analytical DWH
 
 import datetime
 import logging
