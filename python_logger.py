@@ -6,7 +6,7 @@ import logging
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 
-
+# define a simple function
 def say_hi():
     logging.info("Hi, there!")
 
@@ -15,9 +15,9 @@ dag = DAG(
         'lesson1.exercise1',
         start_date=datetime.datetime.now())
 
-
+# add a greet task for Airflow to execute
 greet_task = PythonOperator(
-    task_id="greet_task",
-    python_callable=say_hi,
-    dag=dag
+    task_id="greet_task", # id could by anything as long as it is somewhat descriptive
+    python_callable=say_hi, # passing function to PythonOperator so it knows which function to execute
+    dag=dag # assign 'dag' to the DAG field for the PythonOperator so it knows what DAG it belongs to
 )
