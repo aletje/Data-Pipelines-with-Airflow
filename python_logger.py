@@ -14,7 +14,7 @@ def say_hi():
 
 
 dag = DAG(
-        'exercise',
+        'dag_exercise',
         start_date=datetime.datetime.now() - datetime.timedelta(days=30),
         schedule_interval='@monthly')
 
