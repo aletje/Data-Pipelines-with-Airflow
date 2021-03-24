@@ -8,9 +8,21 @@ import logging
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 
-# define a simple function
+# define demo functions
+# purpose: show how tasks can be coordinated
 def say_hi():
     logging.info("Hi, there!")
+
+def addition():
+    logging.info(f"2 + 2 = {2+2}")
+
+
+def subtraction():
+    logging.info(f"6 -2 = {6-2}")
+
+
+def division():
+    logging.info(f"10 / 2 = {int(10/2)}")
 
 
 dag = DAG(
