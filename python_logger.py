@@ -15,7 +15,7 @@ def say_hi():
 
 dag = DAG(
         'exercise',
-        start_date=datetime.datetime.now() - datetime.timedelta(days=30)
+        start_date=datetime.datetime.now() - datetime.timedelta(days=30),
         schedule_interval='@monthly')
 
 # add a greet task for Airflow to execute
