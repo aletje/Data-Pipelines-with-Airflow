@@ -14,8 +14,9 @@ def say_hi():
 
 
 dag = DAG(
-        'lesson1.exercise1',
-        start_date=datetime.datetime.now())
+        'exercise',
+        start_date=datetime.datetime.now()
+        schedule_interval='@monthly')
 
 # add a greet task for Airflow to execute
 greet_task = PythonOperator(
