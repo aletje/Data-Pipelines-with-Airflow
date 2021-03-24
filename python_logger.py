@@ -15,6 +15,8 @@ def say_hi():
 
 dag = DAG(
         'dag_exercise',
+        # start_date: run now 
+        # time_delta: backfill data for last 30 days 
         start_date=datetime.datetime.now() - datetime.timedelta(days=30),
         schedule_interval='@monthly')
 
